@@ -26,7 +26,7 @@ const GET_PRODUCTS = gql`
             displayValue
             value
           }
-          __typename
+                  __typename
         }
         prices {
           amount
@@ -168,7 +168,7 @@ const CategoryPage: React.FC = () => {
   const addToCart = (id: any) => {
     const product = filteredProducts.find((item: any) => item.id === id);
   
-    if (!product) return; // Ako proizvod ne postoji, prekini izvršavanje
+    if (!product) return; 
   
     const newItem = {
       name: product.name,
@@ -178,6 +178,7 @@ const CategoryPage: React.FC = () => {
         items: attribute.items.map((item: any) => ({
           value: item.value,
           displayValue: item.displayValue,
+          id: item.id
         })),
         selectedValue: attribute.items[0].id,
       })),
