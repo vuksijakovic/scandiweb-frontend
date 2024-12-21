@@ -179,7 +179,7 @@ const CategoryPage: React.FC = () => {
           value: item.value,
           displayValue: item.displayValue,
         })),
-        selectedValue: attribute.items[0].value,
+        selectedValue: attribute.items[0].id,
       })),
       image: product.gallery[0],
       quantity: 1,
