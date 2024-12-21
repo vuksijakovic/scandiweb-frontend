@@ -331,7 +331,7 @@ function CartOverlay({ setCartItems, cartItems, toggleOverlay }: any) {
              {attribute.items.map((item: any, itemIndex: number) => (
                <AttributeItem
                key={itemIndex}
-               isSelected={attribute.selectedValue === item.value}
+               isSelected={attribute.selectedValue === item.id}
                isColor={attribute.name === 'Color'}
                value={item.value}
                data-testid={
