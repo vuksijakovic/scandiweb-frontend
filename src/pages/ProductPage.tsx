@@ -282,8 +282,9 @@
           items: attribute.items.map((item: any) => ({
             value: item.value,
             displayValue: item.displayValue,
+            id: item.id
           })),
-          selectedValue: selectedAttributes[attribute.id] || attribute.items[0].value, 
+          selectedValue: selectedAttributes[attribute.id] || attribute.items[0].id, 
         })),
         image: data.product.gallery[0],
         quantity: 1,
